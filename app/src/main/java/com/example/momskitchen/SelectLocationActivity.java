@@ -30,7 +30,6 @@ public class SelectLocationActivity extends AppCompatActivity {
     FirebaseDatabase database;
     AddressBoxAdaptor AddressBoxAdaptor;
     ArrayList<AddressData> AddressArrayList;
-    ImageButton home;
 
     Button add, next;
     @SuppressLint("MissingInflatedId")
@@ -41,7 +40,6 @@ public class SelectLocationActivity extends AppCompatActivity {
 
         add=findViewById(R.id.addButton);
         next=findViewById(R.id.nextButton);
-        home=findViewById(R.id.homeButton);
 
         addressRecyclerview=findViewById(R.id.addressRecyclerView);
         auth= FirebaseAuth.getInstance();
@@ -98,15 +96,6 @@ public class SelectLocationActivity extends AppCompatActivity {
                         Log.e("Select Location Activity", "Error fetching data: " + databaseError.getMessage());
                     }
                 });
-            }
-        });
-
-
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(SelectLocationActivity.this, HomeActivity.class));
-                finish();
             }
         });
     }

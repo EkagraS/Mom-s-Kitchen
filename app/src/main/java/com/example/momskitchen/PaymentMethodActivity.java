@@ -34,7 +34,6 @@ public class PaymentMethodActivity extends AppCompatActivity {
     FirebaseDatabase database;
     ArrayList<OrderHistoryCartData> orderHistoryCartDataArrayList;
     String ReceiverName, ReceiverAddress;
-    ImageButton home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,6 @@ public class PaymentMethodActivity extends AppCompatActivity {
         online=findViewById(R.id.radioButtonOnline);
         offline=findViewById(R.id.radioButtonOffline);
         placeOrder=findViewById(R.id.placeOrderButton);
-        home=findViewById(R.id.homeButton);
         auth=FirebaseAuth.getInstance();
         database=FirebaseDatabase.getInstance();
         orderHistoryCartDataArrayList = new ArrayList<>();
@@ -140,15 +138,6 @@ public class PaymentMethodActivity extends AppCompatActivity {
                 }
             }
         });
-
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(PaymentMethodActivity.this, HomeActivity.class));
-                finish();
-            }
-        });
-
     }
 
     public void orderConformationMessage(){
