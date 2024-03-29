@@ -1,19 +1,15 @@
 package com.example.momskitchen;
 
 import static android.widget.Toast.LENGTH_SHORT;
-import android.annotation.SuppressLint;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,7 +19,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -32,7 +27,7 @@ import java.util.ArrayList;
 
 
 public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewholder> {
-    MenuActivity MenuActivity;
+    HomeActivity MenuActivity;
     ArrayList<FoodBoxData> foodArrayList;
     ArrayList<FavouritesData> favouritesArrayList;
     Context context;

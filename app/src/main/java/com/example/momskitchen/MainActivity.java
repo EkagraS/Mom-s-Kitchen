@@ -3,7 +3,6 @@ package com.example.momskitchen;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 if(auth.getCurrentUser().isEmailVerified()){
-                                    startActivity(new Intent(MainActivity.this, MenuActivity.class));
+                                    startActivity(new Intent(MainActivity.this, HomeActivity.class));
                                     finish();
                                 }else{
                                     Toast.makeText(MainActivity.this, "Verify your Email address", Toast.LENGTH_LONG).show();

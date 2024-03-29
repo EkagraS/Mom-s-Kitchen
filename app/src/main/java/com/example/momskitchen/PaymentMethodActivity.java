@@ -1,7 +1,7 @@
 package com.example.momskitchen;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.annotation.SuppressLint;
+
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -144,7 +144,7 @@ public class PaymentMethodActivity extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PaymentMethodActivity.this, MenuActivity.class));
+                startActivity(new Intent(PaymentMethodActivity.this, HomeActivity.class));
                 finish();
             }
         });
@@ -165,7 +165,7 @@ public class PaymentMethodActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
-                startActivity(new Intent(PaymentMethodActivity.this, MenuActivity.class));
+                startActivity(new Intent(PaymentMethodActivity.this, HomeActivity.class));
             }
         });
         dialog.show();

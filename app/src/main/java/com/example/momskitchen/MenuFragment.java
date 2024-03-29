@@ -23,9 +23,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class HomeFragment extends Fragment {
+public class MenuFragment extends Fragment {
 
-    public HomeFragment(){}
+    public MenuFragment(){}
     RecyclerView recyclerView1, recyclerView2, recyclerView3, recyclerView4, recyclerView5;
     FirebaseDatabase database1, database2, database3, database4, database5;
     FoodBoxAdaptor adaptor1, adaptor2, adaptor3, adaptor4, adaptor5;

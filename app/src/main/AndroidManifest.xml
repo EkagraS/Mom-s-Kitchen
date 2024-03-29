@@ -52,7 +52,7 @@
             android:name=".OrderPageActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
