@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "773170602824",
+    "project_id": "mom-s-kitchen-975e9",
+    "storage_bucket": "mom-s-kitchen-975e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773170602824:android:ea9d1e639245224720097d",
+        "android_client_info": {
+          "package_name": "com.example.momskitchen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcauxHwjtJv9MS5asJYIocwuGBGn4G6gg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
