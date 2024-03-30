@@ -1,5 +1,7 @@
 package com.example.momskitchen;
 
+import static android.widget.Toast.LENGTH_LONG;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.util.Log;
@@ -9,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -87,6 +90,8 @@ public class OrderBoxAdaptor extends RecyclerView.Adapter<OrderBoxAdaptor.viewho
             remove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    remove.setTranslationX(-30f);
+                    remove.animate().translationXBy(30f).setDuration(500);
                     DatabaseReference reference = database.getReference().child("user").child(auth.getUid()).child("order");
                     int position=getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION) {
@@ -97,6 +102,7 @@ public class OrderBoxAdaptor extends RecyclerView.Adapter<OrderBoxAdaptor.viewho
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
+                                    Toast.makeText(context, "Item removed successfully", LENGTH_LONG).show();
                                     // Item removed successfully
                                     notifyDataSetChanged(); // Notify the adapter about the data change
                                 } else {
@@ -112,6 +118,8 @@ public class OrderBoxAdaptor extends RecyclerView.Adapter<OrderBoxAdaptor.viewho
             favourites.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    favourites.setTranslationX(30f);
+                    favourites.animate().translationXBy(-30f).setDuration(500);
                     int position=getAdapterPosition();
                     if(position!=RecyclerView.NO_POSITION){
                         OrderData OrderData = orderBoxArrayList.get(position);

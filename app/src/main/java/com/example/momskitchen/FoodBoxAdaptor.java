@@ -40,7 +40,7 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
     ImageView image, close;
     LottieAnimationView display;
     TextView Price, Name, message;
-    int Quantity=0, price, value;
+    int price, value;
     RadioGroup rgb;
 
     ImageView plus, minus;
@@ -93,9 +93,12 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
                     cart.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            cart.setTranslationY(-20f);
+                            cart.animate().translationYBy(20f).setDuration(200);
                             Dialog dialog = new Dialog(context);
                             dialog.setContentView(R.layout.quantity_box);
 
+                            final int[] Quantity = {0};
                             Cart = dialog.findViewById(R.id.Cart);
                             Name = dialog.findViewById(R.id.name);
                             Price = dialog.findViewById(R.id.price);
@@ -107,11 +110,11 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
                             plus.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    if(Quantity>=0 && Quantity<=9){
-                                        Quantity++;
-                                        text.setText(String.valueOf(Quantity));
+                                    if(Quantity[0] >=0 && Quantity[0] <=9){
+                                        Quantity[0]++;
+                                        text.setText(String.valueOf(Quantity[0]));
                                     }else{
-                                        text.setText(String.valueOf(Quantity));
+                                        text.setText(String.valueOf(Quantity[0]));
                                     }
                                 }
                             });
@@ -119,12 +122,12 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
                             minus.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    if(Quantity>=1 && Quantity<=10){
-                                        Quantity--;
-                                        text.setText(String.valueOf(Quantity));
+                                    if(Quantity[0] >=1 && Quantity[0] <=10){
+                                        Quantity[0]--;
+                                        text.setText(String.valueOf(Quantity[0]));
                                     }else{
-                                        Quantity=0;
-                                        text.setText(String.valueOf(Quantity));
+                                        Quantity[0] =0;
+                                        text.setText(String.valueOf(Quantity[0]));
                                     }
                                 }
                             });
@@ -142,14 +145,14 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
                                 Cart.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        if(Quantity==0){
+                                        if(Quantity[0] ==0){
                                             Toast.makeText(context, "Quantity should be at least 1", LENGTH_SHORT).show();
                                         }else {
                                             String ID = auth.getUid();
                                             DatabaseReference reference = database.getReference().child("user").child(ID).child("order");
 
                                             String id = reference.push().getKey();
-                                            OrderData data = new OrderData(id, name, price, photo, Quantity);
+                                            OrderData data = new OrderData(id, name, price, photo, Quantity[0]);
 
                                             reference.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
@@ -207,6 +210,8 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
                     heart.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            heart.setTranslationY(-20f);
+                            heart.animate().translationYBy(20f).setDuration(200);
                             int position=getAdapterPosition();
                             if(position!=RecyclerView.NO_POSITION){
                                 FoodBoxData foodBoxData = foodArrayList.get(position);

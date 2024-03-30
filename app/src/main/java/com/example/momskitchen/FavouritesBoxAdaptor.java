@@ -1,5 +1,6 @@
 package com.example.momskitchen;
 
+import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
 
 import android.app.Dialog;
@@ -17,11 +18,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -42,7 +46,7 @@ public class FavouritesBoxAdaptor extends RecyclerView.Adapter<FavouritesBoxAdap
     ImageView image, close;
     LottieAnimationView display;
     TextView Price, Name, message;
-    int Quantity=0, price;
+    int price;
     String name, photo;
 
     ImageView plus, minus;
@@ -97,6 +101,8 @@ public class FavouritesBoxAdaptor extends RecyclerView.Adapter<FavouritesBoxAdap
             remove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    remove.setTranslationX(-30f);
+                    remove.animate().translationXBy(30f).setDuration(500);
                     Log.d("TAG", "reached here");
                     DatabaseReference reference = database.getReference().child("user").child(auth.getUid()).child("favourites");
                     int position=getAdapterPosition();
@@ -110,7 +116,7 @@ public class FavouritesBoxAdaptor extends RecyclerView.Adapter<FavouritesBoxAdap
                             public void onComplete(@NonNull Task<Void> task) {
                                 Log.d("TAG12", orderId);
                                 if (task.isSuccessful()) {
-                                    // Item removed successfully
+                                    Toast.makeText(context, "Item removed successfully", LENGTH_LONG).show();
                                     notifyDataSetChanged(); // Notify the adapter about the data change
                                 } else {
                                     Log.e("TAG", "onComplete: "+task.getException());
@@ -126,6 +132,8 @@ public class FavouritesBoxAdaptor extends RecyclerView.Adapter<FavouritesBoxAdap
             cart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    cart.setTranslationX(30f);
+                    cart.animate().translationXBy(-30f).setDuration(500);
                     Log.d("running", "running");
                     Dialog dialog = new Dialog(context);
                     dialog.setContentView(R.layout.quantity_box);
@@ -138,14 +146,15 @@ public class FavouritesBoxAdaptor extends RecyclerView.Adapter<FavouritesBoxAdap
                     minus=dialog.findViewById(R.id.imageMinus);
                     text=dialog.findViewById(R.id.text);
 
+                    final int[] Quantity = {0};
                     plus.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            if(Quantity>=0 && Quantity<=9){
-                                Quantity++;
-                                text.setText(String.valueOf(Quantity));
+                            if(Quantity[0] >=0 && Quantity[0] <=9){
+                                Quantity[0]++;
+                                text.setText(String.valueOf(Quantity[0]));
                             }else{
-                                text.setText(String.valueOf(Quantity));
+                                text.setText(String.valueOf(Quantity[0]));
                             }
                         }
                     });
@@ -153,12 +162,12 @@ public class FavouritesBoxAdaptor extends RecyclerView.Adapter<FavouritesBoxAdap
                     minus.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            if(Quantity>=1 && Quantity<=10){
-                                Quantity--;
-                                text.setText(String.valueOf(Quantity));
+                            if(Quantity[0] >=1 && Quantity[0] <=10){
+                                Quantity[0]--;
+                                text.setText(String.valueOf(Quantity[0]));
                             }else{
-                                Quantity=0;
-                                text.setText(String.valueOf(Quantity));
+                                Quantity[0] =0;
+                                text.setText(String.valueOf(Quantity[0]));
                             }
                         }
                     });
@@ -176,7 +185,7 @@ public class FavouritesBoxAdaptor extends RecyclerView.Adapter<FavouritesBoxAdap
                         Cart.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                if(Quantity==0){
+                                if(Quantity[0] ==0){
                                     Toast.makeText(context, "Quantity should be at least 1", LENGTH_SHORT).show();
                                 }else {
                                     Log.d("FavouritesBoxAdaptor TAG", "onClick: "+name+price+photo);
@@ -188,7 +197,7 @@ public class FavouritesBoxAdaptor extends RecyclerView.Adapter<FavouritesBoxAdap
 
                                     Log.d("FavouritesBoxAdaptor", "onClick: "+id+name+price+photo);
 
-                                    OrderData data = new OrderData(id, name, price, photo, Quantity);
+                                    OrderData data = new OrderData(id, name, price, photo, Quantity[0]);
 
                                     reference.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
