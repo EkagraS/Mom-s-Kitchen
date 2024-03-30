@@ -58,11 +58,11 @@ public class OrderHistoryDisplayAdaptor extends RecyclerView.Adapter<OrderHistor
     public void onBindViewHolder(@NonNull OrderHistoryDisplayAdaptor.viewholder holder, int position) {
             OrderHistoryDisplayData orderHistoryDisplayData=orderHistoryDisplayDataArrayList.get(position);
 
-            holder.Date.setText("Order Data: "+orderHistoryDisplayData.date);
-            holder.ReceiverName.setText(orderHistoryDisplayData.receiverName);
+            holder.Date.setText("Order Date: "+orderHistoryDisplayData.date);
+            holder.ReceiverName.setText("Receiver Name: "+orderHistoryDisplayData.receiverName);
             holder.Id.setText("Order Id: "+orderHistoryDisplayData.id);
             holder.Status.setText("Delivery Status: Delivered");
-            holder.ReceiverAddres.setText(orderHistoryDisplayData.receiverAddress);
+            holder.ReceiverAddres.setText("Receiver Address: "+orderHistoryDisplayData.receiverAddress);
     }
 
     @Override
