@@ -104,7 +104,6 @@ public class OrderHistoryDisplayAdaptor extends RecyclerView.Adapter<OrderHistor
                                     OrderHistoryDisplayData clickedItem = orderHistoryDisplayDataArrayList.get(position);
                                     String ID = clickedItem.getId();
                                     Log.d("ID for the intent", ID);
-                                    Toast.makeText(context, ID, Toast.LENGTH_LONG).show();
                                     Intent intent=new Intent(context, OrderHistoryDetailsActivity.class);
                                     intent.putExtra("ID", ID);
                                     context.startActivity(intent);

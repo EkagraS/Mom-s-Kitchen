@@ -110,6 +110,8 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
                             plus.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
+                                    plus.setTranslationX(20f);
+                                    plus.animate().translationXBy(-20f).setDuration(200);
                                     if(Quantity[0] >=0 && Quantity[0] <=9){
                                         Quantity[0]++;
                                         text.setText(String.valueOf(Quantity[0]));
@@ -122,6 +124,8 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
                             minus.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
+                                    minus.setTranslationX(-20f);
+                                    minus.animate().translationXBy(20f).setDuration(200);
                                     if(Quantity[0] >=1 && Quantity[0] <=10){
                                         Quantity[0]--;
                                         text.setText(String.valueOf(Quantity[0]));

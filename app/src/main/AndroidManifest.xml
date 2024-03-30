@@ -19,9 +19,6 @@
         android:theme="@style/Theme.MomsKitchen"
         tools:targetApi="31">
         <activity
-            android:name=".AddressActivity"
-            android:exported="false" />
-        <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
         <activity
