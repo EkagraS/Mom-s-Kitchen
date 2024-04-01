@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                                     error.setText("EMAIL ADDRESS DOES NOT EXIST");
                                 }else {
                                     error.setText(task.getException().getMessage());
+                                    Log.d("Failed Login", task.getException().getMessage());
                                 }
 
                                 okay.setOnClickListener(new View.OnClickListener() {

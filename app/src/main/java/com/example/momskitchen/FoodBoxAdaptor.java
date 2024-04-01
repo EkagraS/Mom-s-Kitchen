@@ -189,7 +189,7 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
                                                         display=dialog1.findViewById(R.id.displayImage);
 
                                                         message.setText("Failed to add to cart");
-                                                        display.setAnimation(R.raw.failed);
+                                                        display.setAnimation(R.raw.error);
 
                                                         next.setOnClickListener(new View.OnClickListener() {
                                                             @Override
@@ -260,7 +260,7 @@ public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewhold
                                             display=dialog1.findViewById(R.id.displayImage);
 
                                             message.setText("Failed to add to favourites");
-                                            display.setAnimation(R.raw.failed);
+                                            display.setAnimation(R.raw.error);
 
                                             next.setOnClickListener(new View.OnClickListener() {
                                                 @Override

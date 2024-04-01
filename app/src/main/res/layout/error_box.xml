@@ -11,15 +11,16 @@
         android:id="@+id/errorImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        app:lottie_rawRes="@raw/failed" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/error"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/error" />
 
     <TextView
         android:id="@+id/error"
@@ -28,7 +29,7 @@
         android:text="ERROR"
         android:fontFamily="@font/adamina"
         android:textSize="25sp"
-        app:layout_constraintTop_toTopOf="@+id/errorImage"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -49,13 +50,16 @@
 
     <Button
         android:id="@+id/okay"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:backgroundTint="#E40E0E"
         android:text="OKAY"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/errorMessage" />

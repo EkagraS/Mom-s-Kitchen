@@ -240,7 +240,7 @@ public class FavouritesBoxAdaptor extends RecyclerView.Adapter<FavouritesBoxAdap
                                                 display=dialog1.findViewById(R.id.displayImage);
 
                                                 message.setText("Failed to add to favourites");
-                                                display.setAnimation(R.raw.failed);
+                                                display.setAnimation(R.raw.error);
 
 //                                                display.setOnClickListener(new View.OnClickListener() {
 //                                                    @Override
