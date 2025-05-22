@@ -1,89 +1,138 @@
-# Mom's Kitchen - Food Ordering App
+# 🍽️ Mom's Kitchen - Food Ordering App
 
-Mom's Kitchen is a user-friendly food ordering platform designed to bring convenience and joy to food enthusiasts everywhere.
+**Mom's Kitchen** is a user-friendly Android food ordering platform designed as if a restaurant built their own delivery app. It offers a smooth and engaging user experience with essential features like menu browsing, favorites, cart, and order history.
 
-## Key Features
+---
 
-- Browse delicious food items organized by various categories 🍕🥗
-- Easily add and remove items to/from your favorites ❤️
-- Conveniently manage your cart for seamless ordering 🛒
-- Explore your past order history for quick reordering 📜
-- Enjoy an intuitive user interface with smooth navigation for a delightful experience 📱💨
+## 🚀 Key Features
 
-## Technologies Used
+- 🍕 **Category-Wise Browsing**: View delicious food items organized by different categories.
+- ❤️ **Favorites Section**: Easily add or remove items to/from your favorites.
+- 🛒 **Cart Management**: Add items to cart, update quantities, and place orders.
+- 📜 **Order History**: Track previous orders with details like date, items, and receiver info.
+- 📱 **Intuitive UI**: Clean interface with smooth navigation using bottom navigation and FAB.
 
-- Firebase Authentication: Secure user sign-up, login, and password management 🔐
-- Firebase Realtime Database: Instantly show menu items and user information 🔄
-- Lottie Animation: Enhance user experience with captivating animations 🎉
-- Picasso Image Loading: Load and display images seamlessly from the database 🖼️
-- Google Location Services: Utilize location permissions for streamlined address details 🗺️
+---
 
+## 🛠️ Technologies Used
 
+- 🔐 **Firebase Authentication**: Secure user sign-up, login, email verification.
+- 🔄 **Firebase Realtime Database**: Real-time syncing of menu, favorites, cart, and orders.
+- 🎉 **Lottie Animation**: Lightweight vector animations for success/failure dialogs.
+- 🖼️ **Picasso**: Efficient image loading and caching from Firebase URLs.
+- 📍 **Google Location Services**: Autofills receiver address via location access.
 
-## Frontend Files (Java)
+---
 
-### Activities
-- `MainActivity.java`: Main activity showing food items.
-- `AddLocationDetailsActivity.java`: Activity for adding location details.
-- `ForgotPasswordActivity.java`: Activity for resetting password.
-- `HomeActivity.java`: Home activity.
-- `OrderHistoryDetailsActivity.java`: Activity for displaying order history details.
-- `OrderPageActivity.java`: Activity for displaying order page.
-- `PaymentMethodActivity.java`: Activity for selecting payment method.
-- `SignUpActivity.java`: Activity for user sign-up.
-- `SplashScreenActivity.java`: Splash screen activity.
+## 📂 Project Structure
 
-### Fragments
-- `FavouritesFragment.java`: Fragment for managing favorite food items.
-- `MenuFragment.java`: Fragment for displaying menu items.
-- `OrderHistoryFragment.java`: Fragment for displaying order history.
-- `ProfileFragment.java`: Fragment for managing user profile.
+### 📁 Java Files (Frontend Logic)
 
-### Adapters
-- `AddressBoxAdapter.java`: Adapter for address box.
-- `FavouritesBoxAdapter.java`: Adapter for favorites box.
-- `FoodBoxAdapter.java`: Adapter for food box.
-- `OrderBoxAdapter.java`: Adapter for order box.
-- `OrderHistoryCartAdapter.java`: Adapter for order history cart.
-- `OrderHistoryDisplayAdapter.java`: Adapter for order history display.
+<details>
+  <summary><strong>Activities</strong></summary>
 
-### Data Models
-- `AddressData.java`: Data model for address.
-- `FavouritesData.java`: Data model for favorites.
-- `FoodBoxData.java`: Data model for food box.
-- `OrderData.java`: Data model for order.
-- `OrderHistoryCartData.java`: Data model for order history cart.
-- `OrderHistoryDisplayData.java`: Data model for order history display.
-- `Users.java`: Data model for users.
+  - `MainActivity.java` – Launch screen and base for fragment loading  
+  - `AddLocationDetailsActivity.java` – Form to enter delivery address  
+  - `ForgotPasswordActivity.java` – Password reset via email  
+  - `HomeActivity.java` – Hosts navigation bar and fragments  
+  - `OrderHistoryDetailsActivity.java` – Shows past order details  
+  - `OrderPageActivity.java` – Final order review page  
+  - `PaymentMethodActivity.java` – Payment option selection  
+  - `SignUpActivity.java` – User registration with validation  
+  - `SplashScreenActivity.java` – App splash/loading screen  
+</details>
 
-## Backend Files (XML)
+<details>
+  <summary><strong>Fragments</strong></summary>
 
-### Layouts
-- `activity_add_location_details.xml`: Layout for adding location details.
-- `activity_forgot_password.xml`: Layout for resetting password.
-- `activity_main.xml`: Layout for the main activity.
-- `activity_menu.xml`: Layout for displaying menu items.
-- `activity_order_history_details.xml`: Layout for displaying order history details.
-- `activity_order_page.xml`: Layout for displaying order page.
-- `activity_payment_method.xml`: Layout for selecting payment method.
-- `activity_select_location.xml`: Layout for selecting location.
-- `activity_sign_up.xml`: Layout for user sign-up.
-- `activity_splash_screen.xml`: Layout for the splash screen.
-- `address_box.xml`: Layout for address box.
-- `confirmation_box.xml`: Layout for confirmation box.
-- `error_box.xml`: Layout for error box.
-- `favourites_box.xml`: Layout for favorites box.
-- `food_box.xml`: Layout for food box.
-- `fragment_favourites.xml`: Layout for favorites fragment.
-- `fragment_home.xml`: Layout for home fragment.
-- `fragment_order_history.xml`: Layout for order history fragment.
-- `fragment_profile.xml`: Layout for profile fragment.
-- `order_box.xml`: Layout for order box.
-- `order_history_cart_box.xml`: Layout for order history cart box.
-- `order_history_display_box.xml`: Layout for order history display box.
-- `permission_box.xml`: Layout for permission box.
-- `quantity_box.xml`: Layout for quantity box.
+  - `MenuFragment.java`  
+  - `FavouritesFragment.java`  
+  - `OrderHistoryFragment.java`  
+  - `ProfileFragment.java`  
+</details>
 
-## Contributing
+<details>
+  <summary><strong>Adapters</strong></summary>
 
-Contributions are welcome! If you'd like to contribute to Mom's Kitchen, please fork the repository and create a pull request.
+  - `FoodBoxAdapter.java`  
+  - `FavouritesBoxAdapter.java`  
+  - `OrderBoxAdapter.java`  
+  - `OrderHistoryCartAdapter.java`  
+  - `OrderHistoryDisplayAdapter.java`  
+  - `AddressBoxAdapter.java`  
+</details>
+
+<details>
+  <summary><strong>Data Models</strong></summary>
+
+  - `FoodBoxData.java`  
+  - `FavouritesData.java`  
+  - `OrderData.java`  
+  - `OrderHistoryCartData.java`  
+  - `OrderHistoryDisplayData.java`  
+  - `AddressData.java`  
+  - `Users.java`  
+</details>
+
+---
+
+### 📁 XML Files (UI Layouts)
+
+<details>
+  <summary><strong>Activity Layouts</strong></summary>
+
+  - `activity_main.xml`  
+  - `activity_sign_up.xml`  
+  - `activity_forgot_password.xml`  
+  - `activity_menu.xml`  
+  - `activity_add_location_details.xml`  
+  - `activity_order_page.xml`  
+  - `activity_payment_method.xml`  
+  - `activity_order_history_details.xml`  
+  - `activity_select_location.xml`  
+  - `activity_splash_screen.xml`  
+</details>
+
+<details>
+  <summary><strong>Fragments</strong></summary>
+
+  - `fragment_home.xml`  
+  - `fragment_favourites.xml`  
+  - `fragment_order_history.xml`  
+  - `fragment_profile.xml`  
+</details>
+
+<details>
+  <summary><strong>Custom UI Components</strong></summary>
+
+  - `food_box.xml`  
+  - `favourites_box.xml`  
+  - `order_box.xml`  
+  - `order_history_cart_box.xml`  
+  - `order_history_display_box.xml`  
+  - `address_box.xml`  
+  - `confirmation_box.xml`  
+  - `error_box.xml`  
+  - `quantity_box.xml`  
+  - `permission_box.xml`  
+</details>
+
+---
+
+## 🙌 Contributing
+
+Have ideas or improvements? Feel free to fork this repository and submit a pull request.
+
+---
+
+## 📌 Notes
+
+This app is built as a self-learning and showcase project, aimed to simulate a real-world restaurant ordering system. It is **not a clone of Swiggy/Zomato**, but rather a personalized solution as if a restaurant built their own delivery app.
+
+---
+
+## 📷 Screenshots (Optional)
+
+*Add GIFs or screenshots of your app UI here (menu, cart, order summary, etc.)*
+
+---
