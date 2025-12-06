@@ -27,21 +27,16 @@ import java.util.ArrayList;
 
 
 public class FoodBoxAdaptor extends RecyclerView.Adapter<FoodBoxAdaptor.viewholder> {
-    HomeActivity MenuActivity;
     ArrayList<FoodBoxData> foodArrayList;
-    ArrayList<FavouritesData> favouritesArrayList;
     Context context;
     FirebaseAuth auth;
     FirebaseDatabase database;
-    String name, photo, item;
-    FoodBoxAdaptor adaptor;
-    Button Cart, favourites, next;
-    Spinner quantity;
-    ImageView image, close;
+    String name, photo;
+    Button Cart, next;
+    ImageView image;
     LottieAnimationView display;
     TextView Price, Name, message;
-    int price, value;
-    RadioGroup rgb;
+    int price;
 
     ImageView plus, minus;
     TextView text;
