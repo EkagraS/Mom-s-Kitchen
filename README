@@ -1,80 +1,60 @@
-<h1>🍽️ Mom's Kitchen</h1>
+# 🍽️ Mom's Kitchen
 
-<p >
-  <b>Mom's Kitchen</b> is an Android-based food ordering application built as if a restaurant created its own delivery system.
-  The app focuses on simplicity, smooth navigation, and real-world ordering flow.
-</p>
+**Mom's Kitchen** is an Android-based food ordering app built as if a restaurant created its own delivery system.  
+The app focuses on simplicity, smooth navigation, and a real-world ordering flow.
 
-<hr/>
+---
 
-<h2>📱 About the App</h2>
+## 📱 About the App
 
-<p>
-Mom's Kitchen allows users to browse food items, manage favorites and cart, place orders, and track their order history.
-The app is designed to simulate a real restaurant workflow rather than a large aggregator like Swiggy or Zomato.
-</p>
+Mom's Kitchen allows users to browse food items, manage favorites and cart, place orders, and track order history.  
+It simulates how a restaurant would manage its own delivery app rather than acting like Swiggy or Zomato.
 
-<p>
-From authentication to order confirmation, every step is handled inside the app to provide a complete end-to-end ordering experience.
-</p>
+From authentication to order confirmation, everything is handled inside the app to provide a complete end-to-end experience.
 
-<hr/>
+---
 
-<h2>🔄 App Flow</h2>
+## 🔄 App Flow
 
-<ul>
-  <li>User signs up or logs in using email authentication</li>
-  <li>Email verification ensures only valid users can access the app</li>
-  <li>Menu items are displayed category-wise from the database</li>
-  <li>Users can add items to favorites or cart</li>
-  <li>Cart allows quantity selection and order confirmation</li>
-  <li>Address details are filled using location services</li>
-  <li>After placing an order, users can view it in order history</li>
-  <li>Profile section displays user information and logout option</li>
-</ul>
+- User signs up or logs in with email authentication  
+- Email verification ensures only valid users can access the app  
+- Menu items are displayed category-wise  
+- Users can add items to favorites or cart  
+- Cart allows quantity selection and order confirmation  
+- Address details are filled using location access  
+- Orders appear in order history after confirmation  
 
-<hr/>
+---
 
-<h2>✨ Key Features</h2>
+## ✨ Key Features
 
-<ul>
-  <li>Category-based menu browsing 🍕🥗</li>
-  <li>Favorites and cart management ❤️🛒</li>
-  <li>Order history with complete order details 📜</li>
-  <li>Email-verified user authentication 🔐</li>
-  <li>Location-based address autofill 📍</li>
-  <li>Smooth UI with animations and clean navigation 📱</li>
-</ul>
+- Category-wise menu browsing 🍕🥗  
+- Favorites and cart management ❤️🛒  
+- Order history with detailed records 📜  
+- Email-verified authentication 🔐  
+- Location-assisted address filling 📍  
+- Smooth UI with animations 📱  
 
-<hr/>
+---
 
-<h2>🛠️ Technologies Used</h2>
+## 🛠️ Technologies Used
 
-<ul>
-  <li><b>Firebase Authentication</b> for signup, login, and email verification</li>
-  <li><b>Firebase Realtime Database</b> for menu data, favorites, cart, profile, and order history</li>
-  <li><b>Picasso</b> for efficient image loading from Firebase</li>
-  <li><b>Lottie Animations</b> for visual feedback and better user experience</li>
-  <li><b>Google Location Services</b> to assist users in filling delivery address</li>
-</ul>
+- **Firebase Authentication** – Signup, login, email verification  
+- **Firebase Realtime Database** – Menu, cart, favorites, orders, profile  
+- **Picasso** – Image loading and caching  
+- **Lottie Animations** – UI feedback and dialogs  
+- **Google Location Services** – Address assistance  
 
-<hr/>
+---
 
-<h2>⚙️ Challenges & Learnings</h2>
+## ⚙️ Challenges & Learnings
 
-<p>
-While developing this app, managing data flow across multiple sections like menu, favorites, cart, and order history was challenging.
-Handling these interactions through adapter-based architecture required careful debugging and restructuring.
-</p>
+Managing data across menu, favorites, cart, and order history required careful handling through adapter-based architecture.  
+Debugging incorrect data flow and preventing crashes helped improve stability and overall performance.
 
-<p>
-Another challenge was ensuring the correct data was retrieved and displayed without crashes.
-Through continuous testing and refinement, these issues were resolved, resulting in a stable and smooth experience.
-</p>
+---
 
-<hr/>
-
-<h2>📷 App Preview</h2>
+## 📷 App Preview
 
 <p align="center">
   <img src="screenshots/login.png" width="220"/>
@@ -82,24 +62,9 @@ Through continuous testing and refinement, these issues were resolved, resulting
   <img src="screenshots/cart.png" width="220"/>
 </p>
 
-<p align="center">
-  <i>Add screenshots or a short demo GIF to showcase the app flow</i>
-</p>
+---
 
-<hr/>
+## 📌 Note
 
-<h2>📌 Note</h2>
-
-<p>
-This project was built as a self-learning and portfolio application.
-The codebase is intentionally kept private and shared only for evaluation or review purposes.
-</p>
-
-<hr/>
-
-<h2>🙌 Feedback</h2>
-
-<p>
-If you have suggestions or feedback, feel free to reach out.
-This project represents my learning journey in Android development and real-world app design.
-</p>
+This project is built as a self-learning and portfolio application.  
+The source code is shared selectively for review and evaluation purposes.
