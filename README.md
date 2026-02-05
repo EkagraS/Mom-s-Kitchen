@@ -85,6 +85,8 @@ It represents how a standalone restaurant could design and manage its own food d
 
 <h2>📷 Screenshots</h2>
 
-<p>
-(Add screenshots or screen recordings here)
-</p>
+<img src="app/screenshots/mk1.jpeg" width="300">
+<img src="app/screenshots/mk2.jpeg" width="300">
+<img src="app/screenshots/mk3.jpeg" width="300">
+<img src="app/screenshots/mk4.jpeg" width="300">
+<img src="app/screenshots/mk5.jpeg" width="300">
