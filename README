@@ -1,132 +1,105 @@
-# 🍽️ Mom's Kitchen - Food Ordering App
+<h1 align="center">🍽️ Mom's Kitchen</h1>
 
-**Mom's Kitchen** is a user-friendly Android food ordering platform designed as if a restaurant built their own delivery app. It offers a smooth and engaging user experience with essential features like menu browsing, favorites, cart, and order history.
+<p align="center">
+  <b>Mom's Kitchen</b> is an Android-based food ordering application built as if a restaurant created its own delivery system.
+  The app focuses on simplicity, smooth navigation, and real-world ordering flow.
+</p>
 
----
+<hr/>
 
-## 🚀 Key Features
+<h2>📱 About the App</h2>
 
-- 🍕 **Category-Wise Browsing**: View delicious food items organized by different categories.
-- ❤️ **Favorites Section**: Easily add or remove items to/from your favorites.
-- 🛒 **Cart Management**: Add items to cart, update quantities, and place orders.
-- 📜 **Order History**: Track previous orders with details like date, items, and receiver info.
-- 📱 **Intuitive UI**: Clean interface with smooth navigation using bottom navigation and FAB.
+<p>
+Mom's Kitchen allows users to browse food items, manage favorites and cart, place orders, and track their order history.
+The app is designed to simulate a real restaurant workflow rather than a large aggregator like Swiggy or Zomato.
+</p>
 
----
+<p>
+From authentication to order confirmation, every step is handled inside the app to provide a complete end-to-end ordering experience.
+</p>
 
-## 🛠️ Technologies Used
+<hr/>
 
-- 🔐 **Firebase Authentication**: Secure user sign-up, login, email verification.
-- 🔄 **Firebase Realtime Database**: Real-time syncing of menu, favorites, cart, and orders.
-- 🎉 **Lottie Animation**: Lightweight vector animations for success/failure dialogs.
-- 🖼️ **Picasso**: Efficient image loading and caching from Firebase URLs.
-- 📍 **Google Location Services**: Autofills receiver address via location access.
+<h2>🔄 App Flow</h2>
 
----
+<ul>
+  <li>User signs up or logs in using email authentication</li>
+  <li>Email verification ensures only valid users can access the app</li>
+  <li>Menu items are displayed category-wise from the database</li>
+  <li>Users can add items to favorites or cart</li>
+  <li>Cart allows quantity selection and order confirmation</li>
+  <li>Address details are filled using location services</li>
+  <li>After placing an order, users can view it in order history</li>
+  <li>Profile section displays user information and logout option</li>
+</ul>
 
-## 📂 Project Structure
+<hr/>
 
-### 📁 Java Files (Frontend Logic)
+<h2>✨ Key Features</h2>
 
-<details>
-  <summary><strong>Activities</strong></summary>
+<ul>
+  <li>Category-based menu browsing 🍕🥗</li>
+  <li>Favorites and cart management ❤️🛒</li>
+  <li>Order history with complete order details 📜</li>
+  <li>Email-verified user authentication 🔐</li>
+  <li>Location-based address autofill 📍</li>
+  <li>Smooth UI with animations and clean navigation 📱</li>
+</ul>
 
-  - `MainActivity.java` – Launch screen and base for fragment loading  
-  - `AddLocationDetailsActivity.java` – Form to enter delivery address  
-  - `ForgotPasswordActivity.java` – Password reset via email  
-  - `HomeActivity.java` – Hosts navigation bar and fragments  
-  - `OrderHistoryDetailsActivity.java` – Shows past order details  
-  - `OrderPageActivity.java` – Final order review page  
-  - `PaymentMethodActivity.java` – Payment option selection  
-  - `SignUpActivity.java` – User registration with validation  
-  - `SplashScreenActivity.java` – App splash/loading screen  
-</details>
+<hr/>
 
-<details>
-  <summary><strong>Fragments</strong></summary>
+<h2>🛠️ Technologies Used</h2>
 
-  - `MenuFragment.java`  
-  - `FavouritesFragment.java`  
-  - `OrderHistoryFragment.java`  
-  - `ProfileFragment.java`  
-</details>
+<ul>
+  <li><b>Firebase Authentication</b> for signup, login, and email verification</li>
+  <li><b>Firebase Realtime Database</b> for menu data, favorites, cart, profile, and order history</li>
+  <li><b>Picasso</b> for efficient image loading from Firebase</li>
+  <li><b>Lottie Animations</b> for visual feedback and better user experience</li>
+  <li><b>Google Location Services</b> to assist users in filling delivery address</li>
+</ul>
 
-<details>
-  <summary><strong>Adapters</strong></summary>
+<hr/>
 
-  - `FoodBoxAdapter.java`  
-  - `FavouritesBoxAdapter.java`  
-  - `OrderBoxAdapter.java`  
-  - `OrderHistoryCartAdapter.java`  
-  - `OrderHistoryDisplayAdapter.java`  
-  - `AddressBoxAdapter.java`  
-</details>
+<h2>⚙️ Challenges & Learnings</h2>
 
-<details>
-  <summary><strong>Data Models</strong></summary>
+<p>
+While developing this app, managing data flow across multiple sections like menu, favorites, cart, and order history was challenging.
+Handling these interactions through adapter-based architecture required careful debugging and restructuring.
+</p>
 
-  - `FoodBoxData.java`  
-  - `FavouritesData.java`  
-  - `OrderData.java`  
-  - `OrderHistoryCartData.java`  
-  - `OrderHistoryDisplayData.java`  
-  - `AddressData.java`  
-  - `Users.java`  
-</details>
+<p>
+Another challenge was ensuring the correct data was retrieved and displayed without crashes.
+Through continuous testing and refinement, these issues were resolved, resulting in a stable and smooth experience.
+</p>
 
----
+<hr/>
 
-### 📁 XML Files (UI Layouts)
+<h2>📷 App Preview</h2>
 
-<details>
-  <summary><strong>Activity Layouts</strong></summary>
+<p align="center">
+  <img src="screenshots/login.png" width="220"/>
+  <img src="screenshots/menu.png" width="220"/>
+  <img src="screenshots/cart.png" width="220"/>
+</p>
 
-  - `activity_main.xml`  
-  - `activity_sign_up.xml`  
-  - `activity_forgot_password.xml`  
-  - `activity_menu.xml`  
-  - `activity_add_location_details.xml`  
-  - `activity_order_page.xml`  
-  - `activity_payment_method.xml`  
-  - `activity_order_history_details.xml`  
-  - `activity_select_location.xml`  
-  - `activity_splash_screen.xml`  
-</details>
+<p align="center">
+  <i>Add screenshots or a short demo GIF to showcase the app flow</i>
+</p>
 
-<details>
-  <summary><strong>Fragments</strong></summary>
+<hr/>
 
-  - `fragment_home.xml`  
-  - `fragment_favourites.xml`  
-  - `fragment_order_history.xml`  
-  - `fragment_profile.xml`  
-</details>
+<h2>📌 Note</h2>
 
-<details>
-  <summary><strong>Custom UI Components</strong></summary>
+<p>
+This project was built as a self-learning and portfolio application.
+The codebase is intentionally kept private and shared only for evaluation or review purposes.
+</p>
 
-  - `food_box.xml`  
-  - `favourites_box.xml`  
-  - `order_box.xml`  
-  - `order_history_cart_box.xml`  
-  - `order_history_display_box.xml`  
-  - `address_box.xml`  
-  - `confirmation_box.xml`  
-  - `error_box.xml`  
-  - `quantity_box.xml`  
-  - `permission_box.xml`  
-</details>
+<hr/>
 
----
+<h2>🙌 Feedback</h2>
 
-## 🙌 Contributing
-
-Have ideas or improvements? Feel free to fork this repository and submit a pull request.
-
----
-
-## 📌 Notes
-
-This app is built as a self-learning and showcase project, aimed to simulate a real-world restaurant ordering system. It is **not a clone of Swiggy/Zomato**, but rather a personalized solution as if a restaurant built their own delivery app.
-
----
+<p>
+If you have suggestions or feedback, feel free to reach out.
+This project represents my learning journey in Android development and real-world app design.
+</p>
