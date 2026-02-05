@@ -1,70 +1,90 @@
-# 🍽️ Mom's Kitchen
-
-**Mom's Kitchen** is an Android-based food ordering app built as if a restaurant created its own delivery system.  
-The app focuses on simplicity, smooth navigation, and a real-world ordering flow.
-
----
-
-## 📱 About the App
-
-Mom's Kitchen allows users to browse food items, manage favorites and cart, place orders, and track order history.  
-It simulates how a restaurant would manage its own delivery app rather than acting like Swiggy or Zomato.
-
-From authentication to order confirmation, everything is handled inside the app to provide a complete end-to-end experience.
-
----
-
-## 🔄 App Flow
-
-- User signs up or logs in with email authentication  
-- Email verification ensures only valid users can access the app  
-- Menu items are displayed category-wise  
-- Users can add items to favorites or cart  
-- Cart allows quantity selection and order confirmation  
-- Address details are filled using location access  
-- Orders appear in order history after confirmation  
-
----
-
-## ✨ Key Features
-
-- Category-wise menu browsing 🍕🥗  
-- Favorites and cart management ❤️🛒  
-- Order history with detailed records 📜  
-- Email-verified authentication 🔐  
-- Location-assisted address filling 📍  
-- Smooth UI with animations 📱  
-
----
-
-## 🛠️ Technologies Used
-
-- **Firebase Authentication** – Signup, login, email verification  
-- **Firebase Realtime Database** – Menu, cart, favorites, orders, profile  
-- **Picasso** – Image loading and caching  
-- **Lottie Animations** – UI feedback and dialogs  
-- **Google Location Services** – Address assistance  
-
----
-
-## ⚙️ Challenges & Learnings
-
-Managing data across menu, favorites, cart, and order history required careful handling through adapter-based architecture.  
-Debugging incorrect data flow and preventing crashes helped improve stability and overall performance.
-
----
-
-## 📷 App Preview
+<h1 align="center">🍽️ Mom's Kitchen</h1>
 
 <p align="center">
-  <img src="screenshots/login.png" width="220"/>
-  <img src="screenshots/menu.png" width="220"/>
-  <img src="screenshots/cart.png" width="220"/>
+  An Android food ordering app designed as if a restaurant built its own delivery system.
 </p>
 
----
+<hr>
 
-## 📌 Note
+<h2>📖 About the App</h2>
 
-This project is built as a self-learning and portfolio application.  
-The source code is shared selectively for review and evaluation purposes.
+<p>
+Mom’s Kitchen is a complete food ordering application built for Android.  
+It simulates a real restaurant workflow where users can browse menu items, add them to favorites or cart,
+place orders, track order history, and manage their profile — all inside a single app.
+</p>
+
+<p>
+The focus of the app is simplicity, smooth navigation, and a real-world ordering experience rather than
+acting as a large aggregator like Swiggy or Zomato.
+</p>
+
+<hr>
+
+<h2>⚙️ How the App Works</h2>
+
+<ul>
+  <li>User signs up or logs in using email authentication</li>
+  <li>Email verification ensures only verified users can access the app</li>
+  <li>Menu items are fetched from Firebase and displayed category-wise</li>
+  <li>Users can add items to favorites or cart</li>
+  <li>Address details are auto-filled using device location</li>
+  <li>Orders are confirmed and stored in order history</li>
+</ul>
+
+<hr>
+
+<h2>✨ Core Features</h2>
+
+<ul>
+  <li>Category-wise menu browsing</li>
+  <li>Add / remove items from favorites</li>
+  <li>Cart management with quantity control</li>
+  <li>Order history with detailed summary</li>
+  <li>User profile section</li>
+  <li>Smooth UI using bottom navigation and FAB</li>
+</ul>
+
+<hr>
+
+<h2>🛠️ Technologies Used</h2>
+
+<ul>
+  <li><strong>Firebase Authentication</strong> – Signup, login, email verification</li>
+  <li><strong>Firebase Realtime Database</strong> – Menu, favorites, cart, orders, profile data</li>
+  <li><strong>Picasso</strong> – Image loading and caching</li>
+  <li><strong>Lottie Animations</strong> – Success and error animations</li>
+  <li><strong>Location Services</strong> – Auto-fill delivery address</li>
+</ul>
+
+<hr>
+
+<h2>🚧 Challenges Faced</h2>
+
+<p>
+Managing data flow through multiple adapter classes was initially challenging,
+especially while sending and retrieving data from Firebase.
+This led to crashes due to incorrect data handling.
+</p>
+
+<p>
+Through debugging and refactoring, the data flow was stabilized,
+resulting in smoother performance and reliable app behavior.
+</p>
+
+<hr>
+
+<h2>📌 Notes</h2>
+
+<p>
+This project was built as a self-learning and showcase project.
+It represents how a standalone restaurant could design and manage its own food delivery application.
+</p>
+
+<hr>
+
+<h2>📷 Screenshots</h2>
+
+<p>
+(Add screenshots or screen recordings here)
+</p>
